@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/al_partner_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="15dp"
+            android:background="#1b5dfa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="账户余额"
+            android:textColor="#101010"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="资金记录"
+            android:textColor="#1b5dfa"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp">
+
+        <TextView
+            android:id="@+id/tv_money_sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="¥2751.9"
+            android:textColor="#fcb54f"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/btn_go_tixian"
+            android:layout_width="50dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@drawable/btn_tixian_bg"
+            android:text="提现"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="#fcb54f"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text="已结算但未提现的账户余额"
+        android:textColor="#767676"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="实际收入每周三结算一次"
+        android:textColor="#767676"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

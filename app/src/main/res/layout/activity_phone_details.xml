@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <!--通话详情-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/background_tonghua"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/text_size_20base"
+                android:scaleType="fitXY"
+                android:src="@mipmap/user_img" />
+
+            <TextView
+                android:id="@+id/tv_phonename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="鸡蛋"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--信息部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_10">
+
+            <LinearLayout
+                android:id="@+id/lin_short_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableTop="@mipmap/phone_msg"
+                    android:text="短信"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_call"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableTop="@mipmap/phone_dial_noraml"
+                    android:text="呼叫"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_callusual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_cy"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/cb_cy_selector2"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/tv_cy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="设为常用"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal_16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="手机"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal_14sp" />
+    <!--通话记录-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/datail_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--电话-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+
+        <RelativeLayout
+            android:id="@+id/call_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="159-7971-9752"
+                android:textColor="@color/phone_my_bg"
+                android:textSize="@dimen/text_size_16base" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_5"
+                android:src="@mipmap/phone_tail" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

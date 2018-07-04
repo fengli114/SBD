@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/title_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:layout_below="@id/tou"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/order_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/re_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="滚动文字"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal_16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title_recharge"
+        android:background="#aaa" />
+
+    <LinearLayout
+        android:id="@+id/ll_see"
+        android:layout_below="@id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="31dp"
+            android:text="发现页滚动文字"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/btn_tixian_bg04"
+            android:hint="请输入滚动文字"
+            android:textColor="@color/white"
+            android:textColorHint="#C6D2F3"
+            android:textSize="@dimen/sp_14" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_corner"
+            android:text="确定"
+            android:textColor="#fafafa"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/ll_see"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="31dp"
+            android:text="商城页滚动文字"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_shopId"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/btn_tixian_bg04"
+            android:hint="请输入滚动文字"
+            android:textColor="@color/white"
+            android:textColorHint="#C6D2F3"
+            android:textSize="@dimen/sp_14" />
+        <Button
+            android:id="@+id/btn_shopadd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_corner"
+            android:text="确定"
+            android:textColor="#fafafa"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+</RelativeLayout>

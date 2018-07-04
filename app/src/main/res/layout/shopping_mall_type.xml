@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:numColumns="5"
+    android:overScrollMode="never" />
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/rl_shopping_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20px"
+                android:src="@drawable/quanbufenlei" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="11sp"
+                android:text="全部分类"
+                android:textColor="#5c5c5c" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rl_shopping_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/jinrishangxin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="11sp"
+                android:text="今日上新"
+                android:textColor="#5c5c5c" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rl_shopping_choiceness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/xiaobianjingxuan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="11sp"
+                android:text="小编精选"
+                android:textColor="#5c5c5c" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_shopping_moods"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/chaojirenqi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="11sp"
+                android:text="超级人气"
+                android:textColor="#5c5c5c" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_shopping_nine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/ninepointnine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="11sp"
+                android:text="9.9包邮"
+                android:textColor="#5c5c5c" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>-->

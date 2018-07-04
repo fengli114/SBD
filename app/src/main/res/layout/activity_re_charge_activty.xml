@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/txt_black" />
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/title_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:paddingLeft="@dimen/margin_10">
+
+        <RelativeLayout
+            android:id="@+id/al_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/re_back" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="话费购物卡充值"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal_16sp" />
+
+        <RelativeLayout
+            android:id="@+id/al_orcode"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/login_item_height"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_orcode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/shopping_qrcode" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vis_rech"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@+id/title_recharge"
+        android:background="@color/gray_e8" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vis_rech"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_10base"
+                    android:layout_marginRight="@dimen/text_size_10base"
+                    android:layout_marginTop="@dimen/text_size_10base"
+                    app:cardBackgroundColor="@color/shang_login"
+                    app:cardCornerRadius="10dp">
+
+                    <!--<com.newshangman.org.banner.MZBannerView-->
+                    <!--android:id="@+id/recharge_banner"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/recher_height_height"-->
+                    <!--android:background="@color/white"-->
+                    <!--app:canLoop="true"-->
+                    <!--app:indicatorPaddingLeft="3dp"-->
+                    <!--app:open_mz_mode="true" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/recher_height_height">
+
+                        <ImageView
+                            android:id="@+id/img_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="10dp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:padding="10dp"
+                            android:text="充值"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_card"
+                android:layout_marginLeft="@dimen/text_size_10base"
+                android:layout_marginRight="@dimen/text_size_10base"
+                android:layout_marginTop="@dimen/text_size_15base"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/et_mobiles"
+                    style="@style/edit_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:gravity="center_vertical"
+                    android:hint="请输入要充值的手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <EditText
+                    android:id="@+id/et_cardnum"
+                    style="@style/edit_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:hint="请输入充值卡号"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/et_cardpwd"
+                    style="@style/edit_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:hint="请输入充值卡密"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!--用户协议-->
+            <LinearLayout
+                android:id="@+id/lin_regis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_edit"
+                android:layout_marginTop="@dimen/text_size_10base"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/regiter_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_15base"
+                    android:button="@drawable/check_state"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registration_prrotocol"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_regis"
+                android:layout_marginTop="@dimen/text_size_20base"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/frag_recharge"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/login_btn_corner"
+                        android:text="确定"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal_18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--充值卡说明-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:text="@string/rechargeable_card"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/rechargeable_cardone"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/rechargeable_cardtwo"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--卡片-->
+
+
+</LinearLayout>

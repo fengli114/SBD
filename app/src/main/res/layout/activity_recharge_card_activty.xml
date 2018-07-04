@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/txt_black" />
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/title_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:paddingLeft="@dimen/margin_10">
+
+        <RelativeLayout
+            android:id="@+id/al_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/re_back" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="购物金充值"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal_16sp" />
+
+        <RelativeLayout
+            android:id="@+id/al_orcode"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/login_item_height"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_orcode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/shopping_qrcode" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_ccc" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_picture"
+                android:layout_width="336dp"
+                android:layout_height="185dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/mywallet_gouwuka" />
+
+            <LinearLayout
+                android:id="@+id/lin_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_card"
+                android:layout_marginTop="@dimen/sp_18"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/et_mobiles"
+                    style="@style/edit_base"
+                    android:layout_width="336dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:gravity="center_vertical"
+                    android:hint="请输入要充值的手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <EditText
+                    android:id="@+id/et_cardnum"
+                    style="@style/edit_base"
+                    android:layout_width="336dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:hint="请输入充值卡卡号"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/et_cardpwd"
+                    style="@style/edit_base"
+                    android:layout_width="336dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/layer_white_stroke_corner_item_single"
+                    android:hint="请输入充值卡密"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!--用户协议-->
+            <LinearLayout
+                android:id="@+id/lin_regis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_edit"
+                android:layout_marginTop="@dimen/text_size_10base"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/regiter_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_15base"
+                    android:button="@drawable/check_state"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registration_prrotocol"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/frag_recharge"
+                android:layout_width="135dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/login_btn_corner"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_18sp" />
+            <!--充值卡说明-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:text="@string/rechargeable_card"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:layout_marginTop="5dp"
+                    android:text="1.充值使用后不支持退换"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginLeft="@dimen/text_size_20base"
+                    android:layout_marginTop="3dp"
+                    android:text="2.本充值不参与通信，只可用于购物抵扣部分现金"
+                    android:textColor="@color/rechar_card"
+                    android:textSize="@dimen/text_size_normal_12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

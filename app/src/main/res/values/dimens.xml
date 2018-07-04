@@ -1,0 +1,159 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">200dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_image_size">80dp</dimen>
+    <dimen name="top_viewpager_height">200dp</dimen>
+    <dimen name="detail_image_height">260dp</dimen>
+    <dimen name="theme_image_height">120dp</dimen>
+    <dimen name="item_emoticon_size_default">32dp</dimen>
+    <dimen name="bar_tool_btn_width">56dp</dimen>
+    <dimen name="margin_layout">16dp</dimen>
+    <dimen name="margin_text">8dp</dimen>
+    <dimen name="big_image_size">74dp</dimen>
+    <dimen name="middle_text_size">17sp</dimen>
+    <dimen name="mini_text_size">13sp</dimen>
+    <dimen name="bar_height">48dp</dimen>
+    <dimen name="btn_height">32dp</dimen>
+    <dimen name="min_button_width">52dp</dimen>
+    <dimen name="small_text_size">15sp</dimen>
+    <dimen name="btn_radius">2dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="indicator_margin">10dp</dimen>
+    <dimen name="horizontalspit_view_height">0.6dp</dimen>
+    <dimen name="verticalspit_view_width">0.6dp</dimen>
+    <dimen name="bar_icon_height_userdef">28dp</dimen>
+    <dimen name="toolbar_high">48dp</dimen>
+    <dimen name="space_15dp">15dp</dimen>
+    <dimen name="txt_10sp">10sp</dimen>
+    <dimen name="txt_14sp">14sp</dimen>
+    <dimen name="vertical_video_height">222dp</dimen>
+    <dimen name="fullscreen_topmargin">36dp</dimen>
+    <dimen name="dimen_250dp">250dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_160dp">160dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_0.5dp">0.5dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_150dp">150dp</dimen>
+
+    <!--电影详情图片的宽高-->
+    <dimen name="movie_detail_width">125dp</dimen>
+    <dimen name="movie_detail_height">165dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="padding_page">10dp</dimen>
+    <dimen name="height_bottom_menu">50dp</dimen>
+    <!--标题栏高度-->
+    <dimen name="height_title_bar">75dp</dimen>
+    <dimen name="height_title_view">45dp</dimen>
+    <dimen name="height_et">40dp</dimen>
+    <dimen name="text_size_normal_12sp">12sp</dimen>
+    <dimen name="text_size_normal_14sp">14sp</dimen>
+    <dimen name="text_size_normal_16sp">16sp</dimen>
+    <dimen name="text_size_normal_17sp">17sp</dimen>
+    <dimen name="text_size_normal_18sp">18sp</dimen>
+    <dimen name="text_size_normal_19sp">19sp</dimen>
+    <dimen name="text_size_normal_20sp">20sp</dimen>
+    <dimen name="text_size_normal_21sp">21sp</dimen>
+    <dimen name="text_size_normal_22sp">22sp</dimen>
+    <dimen name="text_size_normal_23sp">23sp</dimen>
+    <dimen name="text_size_normal_24sp">24sp</dimen>
+    <dimen name="text_size_normal_25sp">25sp</dimen>
+
+    <dimen name="expand_tab_item_height">45dp</dimen>
+    <dimen name="login_item_height">50dp</dimen>
+    <dimen name="login_item_width">200dp</dimen>
+    <dimen name="order_recyc_width">150dp</dimen>
+
+
+    <dimen name="order_item_height">40dp</dimen>
+    <dimen name="order_item_width">100dp</dimen>
+
+    <dimen name="login_register_height">45dp</dimen>
+    <dimen name="login_register_width">170dp</dimen>
+    <dimen name="recher_height_height">200dp</dimen>
+
+    <dimen name="shop_height_height">40dp</dimen>
+    <dimen name="shop_textview_height">62.5dp</dimen>
+    <dimen name="login_liner_height">240dp</dimen>
+
+
+    <!-- 首页字体,图标大小配置 -->
+    <dimen name="ic_size_home_recommend">23dp</dimen>
+    <dimen name="text_size_home_recommend_title">16sp</dimen>
+    <dimen name="text_size_item_title">15sp</dimen>
+    <dimen name="text_size_item_content">13sp</dimen>
+    <dimen name="text_size_item_price_current">18sp</dimen>
+    <dimen name="text_size_item_price_original">13sp</dimen>
+
+    <dimen name="c">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+
+    <!-- 基本字体 -->
+    <dimen name="text_size_base">14sp</dimen>
+    <dimen name="text_size_content">13sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <!-- 标题栏 -->
+    <dimen name="title_text_size">22sp</dimen>
+    <dimen name="image_width_list_item">120dp</dimen>
+    <dimen name="text_size_order_info">14sp</dimen>
+    <!-- 已付款订单 -->
+    <dimen name="text_size_order_goods_content">15sp</dimen>
+    <dimen name="width_set_item_icon">20dp</dimen>
+
+    <!-- item 相关配置 -->
+    <dimen name="width_item_left">120dp</dimen>
+    <dimen name="width_cate_left">310dp</dimen>
+
+    <dimen name="paddingLeft_item">10dp</dimen>
+    <dimen name="paddingTop_item">10dp</dimen>
+    <dimen name="paddingRight_item">10dp</dimen>
+    <dimen name="paddingBottom_item">10dp</dimen>
+    <!-- 字体大小 -->
+    <dimen name="textSizeSmall">10sp</dimen>
+    <dimen name="textSizeNormal">12sp</dimen>
+    <dimen name="textSizeMedium">14sp</dimen>
+    <dimen name="textSizeBig">16sp</dimen>
+    <dimen name="textSizeHuge">18sp</dimen>
+    <dimen name="textSizeBIgHuge">20sp</dimen>
+
+    <!-- 基本页面字体 -->
+    <dimen name="text_size_10base">10dp</dimen>
+    <dimen name="text_size_11base">11dp</dimen>
+    <dimen name="text_size_12base">12dp</dimen>
+    <dimen name="text_size_13base">13dp</dimen>
+    <dimen name="text_size_14base">14dp</dimen>
+    <dimen name="text_size_15base">15dp</dimen>
+    <dimen name="text_size_16base">16dp</dimen>
+    <dimen name="text_size_17base">17dp</dimen>
+    <dimen name="text_size_18base">18dp</dimen>
+    <dimen name="text_size_19base">19dp</dimen>
+    <dimen name="text_size_20base">20dp</dimen>
+
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="round_height_80">80dp</dimen>
+    <dimen name="round_height_30">30dp</dimen>
+
+    <dimen name="margin_height_53">33dp</dimen>
+    <dimen name="margin_width_53">53dp</dimen>
+    <dimen name="margin_top_3">3dp</dimen>
+    <dimen name="margin_width_6">6dp</dimen>
+    <dimen name="margin_hight_30">30dp</dimen>
+
+
+    <dimen name="margin_height_164">185dp</dimen>
+    <dimen name="margin_phone_top140">134dp</dimen>
+</resources>

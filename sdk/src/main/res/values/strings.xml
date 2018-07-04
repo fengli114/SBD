@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">随便打</string>
+    <string name="transition_movie_img">transition_movie_img</string>
+    <string name="update_version">版本更新</string>
+</resources>

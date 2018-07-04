@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--<external-path path="image/" name="image" />-->
+    <external-path path="Android/data/com.mhy.shopingphone.fileprovider/" name="files_root" />
+    <external-path path="." name="Download" />
+    <!--当path 为空时 5个全配置就可以解决-->
+    <!--下载apk-->
+    <external-path
+        name="sdcard_files"
+        path="" />
+    <!--相机相册裁剪-->
+    <external-files-path
+        name="camera_has_sdcard"
+        path="" />
+    <files-path
+        name="camera_no_sdcard"
+        path="" />
+</paths>

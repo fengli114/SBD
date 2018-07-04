@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/gray_ccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:background="@color/white">
+
+
+        <!--加号按钮-->
+        <Button
+            android:id="@+id/btn_dial_input_plus"
+            android:layout_width="@dimen/height_bottom_menu"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="+"
+            android:visibility="gone"
+            android:textSize="28sp" />
+
+        <com.mhy.shopingphone.widgets.DigitsEditText
+            android:id="@+id/ed_dial_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_dial_input_delete"
+            android:layout_toRightOf="@+id/btn_dial_input_plus"
+            android:background="@color/white"
+            android:cursorVisible="false"
+            android:fontFamily="sans-serif"
+            android:freezesText="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#1a76f9"
+            android:textSize="@dimen/text_size_normal_20sp"
+            android:textStyle="normal"
+            app:resizing_text_min_size="@dimen/text_size_normal_20sp" />
+
+        <!--清除-->
+        <ImageButton
+            android:id="@+id/btn_dial_input_delete"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@mipmap/emotionstore_progresscancelbtn" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/gray_ccc" />
+</LinearLayout>

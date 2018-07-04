@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_recharge"
+            android:icon="@mipmap/chongzhi"
+            android:title="充值" />
+        <!--<item-->
+            <!--android:id="@+id/nav_order"-->
+            <!--android:icon="@mipmap/dingdanchaxun"-->
+            <!--android:title="详单查询" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_partner"-->
+            <!--android:icon="@drawable/personal_hehuorensysytem"-->
+            <!--android:title="合伙人收益" />-->
+        <item
+            android:id="@+id/nav_steward"
+            android:icon="@mipmap/qiyeguanjia"
+            android:title="企业管家" />
+        <!--<item-->
+        <!--android:id="@+id/nav_account"-->
+        <!--android:icon="@mipmap/wodezhanghu"-->
+        <!--android:title="@string/my_accounts" />-->
+
+        <!--<item-->
+        <!--android:id="@+id/nav_name"-->
+        <!--android:icon="@mipmap/wodegerenmingpian"-->
+        <!--android:title="@string/my_business_card" />-->
+
+        <item
+            android:id="@+id/nav_help_center"
+            android:icon="@mipmap/bangzhuzhongxin"
+            android:title="帮助中心" />
+        <item
+            android:id="@+id/nav_call_me"
+            android:icon="@mipmap/lianxiwomen"
+            android:title="联系我们" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/tuichudenglu"
+            android:title="退出登录"
+            />
+
+    </group>
+
+    <!--<item android:title="选项">-->
+        <!--<menu>-->
+           <!---->
+        <!--</menu>-->
+    <!--</item>-->
+
+
+</menu>

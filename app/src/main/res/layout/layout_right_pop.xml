@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/background_cy"
+    android:divider="@drawable/divider_horizontal_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="one"
+        android:textSize="15sp"
+        />
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="two"-->
+        <!--android:textSize="14sp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="two"-->
+        <!--android:textSize="15sp"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="two"-->
+        <!--android:textSize="15sp"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="two"-->
+        <!--android:textSize="15sp"/>-->
+
+</LinearLayout>

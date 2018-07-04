@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mhy.shopingphone.ui.activity.start.LoginActivty">
+
+    <RelativeLayout
+        android:id="@+id/lin_tilte"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+
+        <ImageView
+            android:id="@+id/regis_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/login_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hehuorenxitong_back" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_backs"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hehuorenxitong_back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.mhy.shopingphone.widgets.NonSlipViewPager
+        android:id="@+id/vp_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.mhy.shopingphone.widgets.NonSlipViewPager>
+    <!--底部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_licence"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <ListView
+        android:id="@+id/list_phone"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:divider="@color/phone_calllog_calls"
+        android:dividerHeight="0.1dp"
+        android:visibility="gone" />
+
+    <com.mhy.shopingphone.widgets.DialPadView
+        android:id="@+id/mdialpad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="171dp"
+        android:clickable="true" />
+
+    <com.youth.banner.Banner
+        android:id="@+id/dial_banner"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:background="@mipmap/gray_default"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right">
+
+        <com.mhy.shopingphone.ui.anniu.DragFloatingActionButton
+            android:id="@+id/anniu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:src="@drawable/money"
+            app:backgroundTint="#00ffffff"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:fabSize="mini" />
+    </LinearLayout>
+</RelativeLayout>

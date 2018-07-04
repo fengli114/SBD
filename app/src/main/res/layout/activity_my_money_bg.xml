@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.mhy.shopingphone.ui.activity.recharge.MyMoneyBgActivity">
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <include layout="@layout/include_title" />
+    <RelativeLayout
+        android:id="@+id/btn_rc_recharge"
+        android:layout_width="336dp"
+        android:layout_height="185dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/mywallet_tonghuagouwuyikatong">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_rc_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效期期至2018年06月01日"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_10" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额：¥"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_rc_blance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:text="601"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_phone"
+                android:layout_width="84dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/recharge_state_bg"
+                android:text="立即充值"
+                android:textColor="#378fc0"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_gc_recharge"
+        android:layout_width="336dp"
+        android:layout_height="185dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/mywallet_gouwuka">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gc_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效期期至2018年06月01日"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_10" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额：¥"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_gc_blance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:text="601"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_card"
+                android:layout_width="84dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/recharge_state_bg"
+                android:text="立即充值"
+                android:textColor="#378fc0"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

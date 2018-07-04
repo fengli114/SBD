@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <!--<include layout="@layout/activity_goods_dtail"/>-->
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_rotate_header_with_text_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tou"
+        android:layout_marginBottom="45dp"
+        android:background="@color/white"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+        <!--<include layout="@layout/include_shopmall_layout"/>-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    <RelativeLayout
+        android:id="@+id/al_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tou"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_gd_back"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_now_buy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/now_buy_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_qq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="2dp"
+                android:src="@drawable/qqfeedback"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="反馈"
+                android:textSize="10sp"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:textColor="#aaa" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fenxiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="分享商品"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_duihuan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#f94040"
+            android:gravity="center"
+            android:text="立即兑换"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+</RelativeLayout>

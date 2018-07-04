@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">随便打</string>
+    <string name="agree">随便打</string>
+    <string name="transition_movie_img" />
+    <string name="login_licence">已获得工信部增值电信服务业许可证</string>
+    <string name="register_registration_protocol">我已同意用户注册协议</string>
+    <string name="registration_prrotocol">我已同意充值协议</string>
+    <string name="rechargeable_card">充值卡说明:</string>
+    <string name="rechargeable_cardone">1:可拨打国内长途，无漫游费</string>
+    <string name="rechargeable_cardtwo">2:该充值卡与手机SIM卡话费充值无关</string>
+    <!--mhy_-->
+    <string name="remember_me">记住我</string>
+    <string name="partner_title">合伙人系统</string>
+    <string name="partner_account">请输入邮箱/用户名</string>
+    <string-array name="spingarr">
+        <item>15</item>
+        <item>30</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="spinger">
+        <item>允许</item>
+        <item>不允许</item>
+    </string-array>
+    <string-array name="spinners">
+        <item>正常</item>
+        <item>冻结</item>
+    </string-array>
+    <string-array name="spingers">
+        <item>随便打JH引擎</item>
+        <item>随便打MY引擎</item>
+    </string-array>
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+</resources>

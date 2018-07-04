@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugi
+
+// 配置GreenDao基本参数
+greendao {
+    schemaVersion 1 //当前数据库版本
+    /**
+     * 输出dao的数据库操作实体类文件夹（相对路径 包名+自定义路径名称，包将创建于包名的直接路径下）
+     */
+    daoPackage 'com.mhy.shopingphone.model.bean.greendao'
+    /**
+     * greenDao实体类包文件夹
+     */
+    targetGenDir 'src/main/java'
+
+}
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.newshangman.org"
+        multiDexEnabled true
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 3
+        versionName "4.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库（不需要的删除即可）。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "bad77757c19e87203243087d", //JPush上注册的包名对应的appkey（*换成你的*）
+//                JPUSH_APPKEY : "", //JPush上注册的包名对应的appkey（*换成你的*）
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+        controlconfig {
+            keyAlias 'suibianda'
+            keyPassword '123456'
+            storeFile file('D:/dabao/suibianda.jks')
+            storePassword '123456'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.controlconfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+//            minifyEnabled false
+//            //Zipalign优化
+//            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            signingConfig signingConfigs.controlconfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+    }
+//        release {
+//            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            //混淆
+//            minifyEnabled true
+//            //Zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+//                            && 'release'.equals(variant.buildType.name)) {
+//                        def apkFile = new File(
+//                                output.outputFile.getParent(),
+//                                "YiZhi_${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk")
+//                        output.outputFile = apkFile
+//                    }
+//                }
+//            }
+//        }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+    compile project(path: ':sdk')
+    compile 'org.greenrobot:greendao:3.2.2'
+    // 添加库
+    compile 'com.blankj:utilcode:1.10.0'
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.zhy:okhttputils:2.6.2'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    compile 'com.alibaba:fastjson:1.2.38'
+    implementation files('libs/alipaySdk-20170922.jar')
+    compile 'com.github.huburt-Hu:NewbieGuide:v1.2.0'
+    compile 'com.just.agentweb:agentweb:3.1.0'
+    //    compile 'cn.jiguang:jpush:2.1.8'
+    compile 'cn.jiguang.sdk:jpush:3.0.3'
+    // 此处以JPush 3.0.3 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.1'
+    // 此处以JCore 1.1.1 版本为例。
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    //    compile 'com.facebook.fresco:fresco:1.2.0'
+    //    compile 'me.relex:photodraweeview:1.1.2'
+    implementation files('libs/universal-image-loader-1.9.4-with-sources.jar')
+    implementation project(':didi_sdk_for_common_v2.0.0111')
+
+}

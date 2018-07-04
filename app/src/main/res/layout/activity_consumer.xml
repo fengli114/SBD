@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+     <ImageView
+         android:id="@+id/tou"
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="@color/black" />
+
+     <RelativeLayout
+         android:id="@+id/title_recharge"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/login_item_height"
+         android:layout_below="@id/tou"
+         android:background="@color/white">
+
+         <ImageView
+             android:id="@+id/order_back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:padding="@dimen/dp_10"
+             android:src="@mipmap/re_back" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="消费码验证"
+             android:textColor="@color/black"
+             android:textSize="@dimen/text_size_normal_16sp" />
+
+         <RelativeLayout
+             android:id="@+id/al_orcode"
+             android:layout_width="50dp"
+             android:layout_height="@dimen/login_item_height"
+             android:layout_alignParentRight="true"
+             android:gravity="center">
+
+             <ImageView
+                 android:id="@+id/img_orcode"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:src="@mipmap/shopping_qrcode" />
+         </RelativeLayout>
+     </RelativeLayout>
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:layout_below="@id/title_recharge"
+         android:background="#aaa" />
+
+     <LinearLayout
+         android:id="@+id/ll_xiaofei"
+         android:layout_below="@id/title_recharge"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/dp_22"
+         android:orientation="horizontal">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:text="消费码:  "
+             android:gravity="center_vertical"
+             android:textColor="@color/black"/>
+         <EditText
+             android:id="@+id/et_mobiles"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             style="@style/edit_base"
+             android:layout_height="40dp"
+             android:inputType="number"
+             android:maxLength="11"
+             android:maxLines="1"
+             android:layout_marginTop="@dimen/margin_5"
+             android:background="@drawable/layer_white_stroke_corner_item_single"
+             android:hint="请输入你的消费码"
+             android:paddingLeft="@dimen/dp_5"
+             android:textColor="@color/strokes" />
+     </LinearLayout>
+     <LinearLayout
+         android:layout_below="@id/ll_xiaofei"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center">
+
+         <Button
+             android:layout_width="150dp"
+             android:layout_height="40dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="15dp"
+             android:background="@drawable/login_btn_corner"
+             android:text="确定"
+             android:textColor="@color/white"
+             android:textSize="@dimen/text_size_normal_18sp" />
+     </LinearLayout>
+</RelativeLayout>

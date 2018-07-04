@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/title_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/img_backs"
+            android:layout_width="40dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/re_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/img_finsh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/img_backs"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal_16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vis_rech"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@+id/title_recharge"
+        android:background="@color/gray_e8" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vis_rech" />
+    >
+
+    <com.mhy.shopingphone.view.webview.TinyWebView
+        android:id="@+id/progress_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vis_rech"
+        android:scrollbarSize="0dip"
+        android:visibility="gone" />
+</RelativeLayout>

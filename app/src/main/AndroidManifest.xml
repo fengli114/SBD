@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mhy.shopingphone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />  <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取MAC地址-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读写sdcard，storage等等 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--8.0安装需要的权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <!-- 可选-->
+    <!--<uses-permission android:name="android.permission.READ_LOGS" /> &lt;!&ndash; 获取logcat日志 &ndash;&gt;-->
+
+    <application
+        android:name=".global.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/newyear"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/newyear"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.FlashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mhy.shopingphone.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver android:name=".ui.UpdataBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".cache.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.newshangman.org" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.webview.WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!-- <activity -->
+        <!-- android:name=".webview.WebViewActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|orientation" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="adjustPan" /> -->
+        <activity android:name=".ui.activity.GoodsActivity" />
+        <activity android:name=".ui.activity.WebViewLoadActivity" />
+        <activity android:name=".ui.activity.detail.GoodsDtailActivity" />
+        <activity android:name=".ui.activity.start.LoginActivty" />
+        <activity android:name=".ui.activity.main.HeadSettingActivity" />
+        <activity android:name=".ui.activity.order.MyOrderActivity" />
+        <activity android:name=".ui.activity.detail.DynamicActivity" />
+        <activity android:name=".ui.activity.partner.PartnerLoginActivity" />
+        <activity android:name=".ui.activity.partner.PartnerShipActivity" />
+        <activity android:name=".ui.activity.recharge.ScanActivity" />
+        <activity
+            android:name=".ui.activity.recharge.ReChargePhoneActivty"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".ui.activity.phone.DialBackActivity" />
+        <activity android:name=".ui.activity.phone.PhoneDetailsActivity" />
+        <activity android:name=".ui.activity.ShopTypeActivity" />
+        <activity android:name=".ui.activity.search.SearchActivity" />
+        <activity android:name=".ui.activity.detail.ShopDtailsActivity" />
+        //商品详情
+        <activity android:name=".ui.fragment.shop.child.ShopActivity" />
+        <activity android:name=".ui.fragment.shop.child.ShoperActivity" />
+        //京东商品
+        <activity android:name=".ui.activity.detail.PersonalDataActivity" />
+        <activity android:name=".ui.VerificationActivity" />
+        <activity
+            android:name=".ui.activity.recharge.RechargeCardActivty"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".ui.activity.recharge.MyMoneyBgActivity" />
+        <activity android:name=".ui.activity.detail.ReachargeDetailActivity" />
+
+        <activity android:name=".ui.activity.tixian.TiXianActivity" />
+        <activity android:name=".ui.activity.tixian.BindActivity" />
+        <activity android:name=".ui.activity.tixian.OrderDetailsActivity" />
+        <activity android:name=".ui.activity.tixian.MoneyRecordActivity" />
+        <activity android:name=".ui.activity.recharge.RechargeZFBActivity" />
+        <activity android:name=".ui.activity.recharge.RechargeActivity" />
+        //话费充值
+        <activity android:name=".ui.activity.recharge.RechargeRecordActivity" />
+        <activity android:name=".ui.activity.OrderInquiryActivity" />
+        //话单查询
+        <activity android:name=".ui.activity.OrderTishiActivity" />
+        //无网络提示
+        <activity android:name=".ui.activity.MyTeamActivity" />
+        <activity android:name=".ui.activity.AboutWeActivity" />
+        //关于我们
+        <activity android:name=".ui.activity.HistoryVersionsActivity" />
+        //历史版本
+        <activity android:name=".ui.activity.AboutParticularsActivity" />
+        //历史版本详情
+        <activity android:name=".ui.activity.SteWardActivity" />
+        //企业管家
+        <activity android:name=".ui.activity.ConsumerActivity" />
+        //消费码界面
+        <activity android:name=".ui.activity.ContactsActivity" />
+        //通讯录界面
+        <activity android:name=".ui.activity.PictureDisplayActivity" />
+        //图片的全屏查看
+        <activity android:name=".ui.activity.TickingActivity" />
+        //商务反馈
+        <activity android:name=".ui.activity.ShopIntroActivity" />
+        //店铺详情
+        <activity android:name=".ui.activity.GrowPicturePreview" />
+        //图片展示
+        <activity android:name=".ui.activity.AboutDiscountActivity" />
+        //折扣买单
+        //消费码验证
+        <!-- 可选-->
+        <activity android:name="com.sdu.didi.openapi.DiDiWebActivity" />
+        <activity android:name=".ui.activity.detail.ShopDtailesActivity" />
+        //热门推荐详情
+        <activity android:name=".ui.activity.StewardLoggingActivity" />
+        //企业管家登录界面
+        <activity android:name=".ui.activity.RechargeCentreActivity" />
+        //企业管家充值界面
+        <activity android:name=".ui.activity.order.SogoManageActivity" />
+        //商户管理界面
+        <activity android:name=".ui.activity.SogoAmendActivity" />
+        //商户添加删除界面
+        <activity android:name=".ui.activity.CarouselActivity" />
+        //轮播广告
+        <activity android:name=".ui.activity.ImageUploadActivity" />
+        //图片上传
+        <activity android:name=".ui.activity.ImageXiugaiActivity" />
+        //图片修改界面
+        <activity android:name=".ui.activity.detail.ShopJDDtailsActivity" />//京东详情界面
+        <activity android:name=".ui.activity.search.SearcherActivity" />
+        //京东搜索界面
+        <activity android:name=".ui.activity.tixian.MerchantActivity" />
+        //商户添加界面
+        <activity android:name=".ui.activity.EightUploadActivity" />
+        //八大模块
+        <activity android:name=".ui.activity.EightXiuGaiActivity" />
+        //修改八大模块
+        <activity android:name=".ui.activity.SogoAmenddeletiActivity" />
+        //修改商户
+        <activity android:name=".ui.activity.CarouseActivityActivity" />
+        //轮播广告
+        <activity android:name=".ui.activity.StewardPawswordActivity" />
+        //企业管家修改密码
+        <activity android:name=".ui.activity.EightqitaActivity" />
+        //其他广告
+        <activity android:name=".ui.activity.CardidTransferActivity" />
+        //卡密划拨
+        <activity android:name=".ui.activity.RechargeableCardActivity" />
+        //充值卡管理
+        <activity android:name=".ui.activity.MarqueeTextActivity" />
+        //滚动文字
+        <activity android:name=".ui.activity.order.SogoRechargeActivity" />
+        //商户充值
+        <activity android:name=".ui.activity.RechargeZhanghuActivity" />
+        商户划拨
+        <activity android:name=".ui.activity.order.UserManageActivity" />
+        //用户管理
+        <activity android:name=".ui.activity.ModelXiuGaiActivity" />
+        //模块修改
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5b175827f29d982318000097" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Baidu" />
+    </application>
+
+</manifest>

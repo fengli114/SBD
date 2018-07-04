@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dial_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#55000000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:id="@+id/tv_callphone_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/phone_my_bg"
+                    android:textSize="@dimen/text_size_normal_20sp" />
+
+                <TextView
+                    android:id="@+id/tv_call_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/phone_my_bg"
+                    android:textSize="@dimen/text_size_normal_18sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_calladdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center_horizontal"
+                android:textColor="@color/phone_my_bg"
+                android:textSize="@dimen/text_size_normal_18sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_dialback"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="#55000000"
+            android:src="@drawable/call_hangup" />
+    </LinearLayout>
+
+</RelativeLayout>

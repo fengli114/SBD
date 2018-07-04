@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/al_item"
+    android:layout_height="38dp"
+    android:background="@color/white"
+    android:layout_margin="@dimen/dp_10"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_team_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="18888654787"
+        android:textColor="#343434"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_team_sum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="2875.22"
+        android:textColor="#343434"
+        android:textSize="13sp" />
+</LinearLayout >

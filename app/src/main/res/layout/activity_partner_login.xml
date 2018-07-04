@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/hehuorenloginpic" />
+
+        <RelativeLayout
+            android:id="@+id/al_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_item_height"
+            android:padding="@dimen/margin_10"
+          >
+
+            <RelativeLayout
+                android:id="@+id/al_back"
+                android:layout_width="40dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hehuorenxitong_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/partner_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_18sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!--android:layout_centerInParent="true"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_tilte"
+        android:layout_marginTop="@dimen/margin_5"
+        android:orientation="vertical">
+
+
+        <!--登录-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_tilte"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/hehuorenlogin_zhanghu" />
+
+            <EditText
+                android:id="@+id/edit_partner_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@null"
+                android:hint="请输入后台管理账号"
+                android:maxLines="1"
+                android:paddingTop="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_c"
+                android:textSize="@dimen/text_size_normal_16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_below="@+id/lin_login"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/gray_ccc" />
+
+        <!--登录-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vis_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/regiter_pwd" />
+
+            <EditText
+                android:id="@+id/edit_partner_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@null"
+                android:hint="请输入后台管理密码"
+                android:inputType="textPassword"
+                android:paddingTop="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_c"
+                android:textSize="@dimen/text_size_normal_16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_below="@+id/lin_pwd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/gray_ccc" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/al_partner_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        >
+
+        <CheckBox
+            android:id="@+id/cb_partner_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/cb_remrmber_selector"
+            android:text="@string/remember_me"
+            android:textColor="@color/gray_c"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_partner_login"
+        android:layout_width="@dimen/login_item_width"
+        android:layout_height="@dimen/expand_tab_item_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_btn_corner"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal_18sp" />
+
+
+</LinearLayout>
